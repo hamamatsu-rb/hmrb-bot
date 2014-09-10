@@ -5,5 +5,5 @@
 #   hubot やい
 
 module.exports = (robot) ->
-  robot.respond /やい$/i, (msg) ->
+  robot.hear /^やい$/i, (msg) ->
     msg.send "やい"
