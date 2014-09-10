@@ -1,8 +1,15 @@
 
 module.exports = (robot) ->
   robot.respond /ハッピーグルメ弁当といったら？$/, (msg) ->
+
+    wait = (time) ->
+        $.Deferred (defer) ->
+            setTimeout ->
+                defer.resolve()
+            , time
+
     msg.send """
-    　┏┓　 ┏┓　　 　 ┏┓ 　 　 /　ァ〉ｲ〉ハ ヽ 　　 　┏┓　 ┏┓　 　 　┏┓　 ┏┓
+  ┏┓　 ┏┓　　 　 ┏┓ 　 　 /　ァ〉ｲ〉ハ ヽ 　　 　┏┓　 ┏┓　 　 　┏┓　 ┏┓
 　┃┗┓┗┛　┏┓┃┃　 　 l　 ﾌﾑ （_ノ` 　',. 　 ┏┛┗┓┗┛　┏┓┃┃　 ┃┃
 　┃┏┛　　 　 ┗┛┃┃　　　', _/7ﾆ_ ﾅナ　ﾉ. 　 ┗┓┏┛ 　　　 ┗┛┃┃　 ┗┛
 　┃┗━┓　　 ┏━┛┃　　 　 >_＿_ ナレ ′ ┏┓┃┃┏┓　　 ┏━┛┃　 ┏┓
@@ -22,7 +29,9 @@ module.exports = (robot) ->
 　　　　ｨ／ 　 {　　　　　　i　　 i　 　',/　　　 !　　 i 　　　l
 　 　 // 　 　 !　　　　　　 !　 　l　　八　　　 l　 　i 　　　 !
 """
-    msg.send """
+
+    setTimeout () ->
+      msg.send """
     　　　　　　/ン'〃　　　　　　　　　　　　`''ｰ-､　　　 ヽ
 　　　　　　j　 .彳〃ﾘ从i i i,,,,,　　 　 　 　 　 　 ｀''-､　 .ｌ
 　　　　 .彡彡　.ii i ﾘi ii　i i i. !､　ミ　 　 　 　 　 　　.＼│
@@ -41,3 +50,4 @@ module.exports = (robot) ->
 　　　/　　　　　ﾐ ﾐ .＼　 　 　 　 ,／　　 ./ 　　lﾞ
 　　 /　　　　　 ミ　ミ　`-．　-⌒＼　　 .'"　　　"
 """
+    , 1200
