@@ -9,10 +9,12 @@ cronJob = require('cron').CronJob
 module.exports = (robot) ->
   kaigiDate = new Date "2015-03-28 09:00:00 +0900"
   cronjob = new cronJob('0 0 9 * * 6', () =>
-    envelope = room: "#debug"
+    days = parseInt(diff/(24*60*60*1000), 10)
+    return 0 if days < 0
+
+    envelope = room: "#general"
     now = new Date
     diff = kaigiDate.getTime() - now.getTime()
-    days = parseInt(diff/(24*60*60*1000), 10)
-    robot.send envelope, "浜松Ruby会議まであと #{days}日じゃよ"
+    robot.send envelope, "浜松Ruby会議まであと #{days}日です"
   )
   cronjob.start()
