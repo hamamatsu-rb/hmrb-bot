@@ -8,7 +8,7 @@ cronJob = require('cron').CronJob
 
 module.exports = (robot) ->
   kaigiDate = new Date "2015-03-28 09:00:00 +0900"
-  cronjob = new cronJob('0 0 9 * * 6', () =>
+  cronjob = new cronJob('0 0 18 * * 6', () =>
     now = new Date
     diff = kaigiDate.getTime() - now.getTime()
     days = parseInt(diff/(24*60*60*1000), 10)
