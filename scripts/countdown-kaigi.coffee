@@ -19,8 +19,9 @@ module.exports = (robot) ->
   # 定期実行
   cronjob = new cronJob('0 0 18 * * 6', () =>
     greet = restDaysGreet()
-    envelope = room: "#kaigi01"
-    robot.send envelope, greet
+    if greet
+      envelope = room: "#kaigi01"
+      robot.send envelope, greet
   )
   cronjob.start()
 
