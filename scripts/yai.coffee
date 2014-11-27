@@ -6,4 +6,4 @@
 
 module.exports = (robot) ->
   robot.hear /^やい$/i, (msg) ->
-    msg.send "やい"
+    msg.reply "やい"

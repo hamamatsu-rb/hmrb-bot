@@ -1,1 +1,4 @@
-[]
+[
+  "hubot-redis-brain",
+  "hubot-google-images"
+]
