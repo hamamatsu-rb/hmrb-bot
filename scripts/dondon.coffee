@@ -1,3 +1,8 @@
+# Description:
+#   今話題のハッピーグルメ弁当について教えてくれる
+#
+# Commands:
+#   hubot *ハッピーグルメ弁当といったら？ - お弁当のどんどんAAを返す
 
 module.exports = (robot) ->
   robot.respond /ハッピーグルメ弁当といったら？$/, (msg) ->
