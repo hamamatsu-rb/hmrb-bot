@@ -37,6 +37,8 @@ scripts/ 以下に .coffee ファイルを作成します。
 
 ## デプロイ
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 参考:
 http://nanapi.co.jp/blog/2014/06/04/slack_with_hubot/
 
