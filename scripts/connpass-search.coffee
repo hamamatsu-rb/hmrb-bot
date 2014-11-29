@@ -21,6 +21,7 @@ format_period = (start, end) ->
   minute_ed = fill_zero end.getMinutes()
   month = start.getMonth() + 1
   weekday = weekdays[start.getDay()]
+
   period = "#{start.getFullYear()}/#{month}/#{start.getDate()}(#{weekday})" +
     " #{start.getHours()}:#{minute_st}〜#{end.getHours()}:#{minute_ed}"
 
@@ -30,7 +31,10 @@ format_event = (e) ->
   end_date = new Date(e.ended_at)
   start_date = new Date(e.started_at)
   days_passed = Math.round((end_date.getTime() - now.getTime()) / DAY)
+
+  # 過去のイベントは表示しない
   return null if days_passed < 0
+
   period = format_period(start_date, end_date)
   return "#{period} #{e.title}\n  #{e.event_url}\n"
 
