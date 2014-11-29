@@ -4,14 +4,18 @@
 # Commands:
 #   hubot connpass [keyword]
 
+# 1日のマイクロ秒数
 DAY = 1000 * 60 * 60  * 24
+# 曜日
 weekdays = ["日", "月", "火", "水", "木", "金", "土"]
 
+# 数値を0で埋め、2桁にする
 fill_zero = (num) ->
   str = '0' + num
   sliced = str.slice(-2)
   return sliced
 
+# イベント開催期間を文字列に変換
 format_period = (start, end) ->
   minute_st = fill_zero start.getMinutes()
   minute_ed = fill_zero end.getMinutes()
@@ -20,6 +24,7 @@ format_period = (start, end) ->
   period = "#{start.getFullYear()}/#{month}/#{start.getDate()}(#{weekday})" +
     " #{start.getHours()}:#{minute_st}〜#{end.getHours()}:#{minute_ed}"
 
+# イベント1件を文字列に
 format_event = (e) ->
   now = new Date
   end_date = new Date(e.ended_at)
@@ -29,7 +34,8 @@ format_event = (e) ->
   period = format_period(start_date, end_date)
   return "#{period} #{e.title}\n  #{e.event_url}\n"
 
-
+# bot へのイベント登録
+# APIリファレンス http://connpass.com/about/api/
 module.exports = (robot) ->
   robot.respond /connpass (.*)$/, (msg) ->
     url = "http://connpass.com/api/v1/event/?order=2&count=3&keyword=" + msg.match[1]
