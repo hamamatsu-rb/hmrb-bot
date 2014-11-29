@@ -35,6 +35,9 @@ npm install
 scripts/ 以下に .coffee ファイルを作成します。
 他のスクリプトを参考にしましょう。
 
+スクリプト作りの参考はこちら
+https://github.com/github/hubot/blob/master/docs/scripting.md
+
 ## デプロイ
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
