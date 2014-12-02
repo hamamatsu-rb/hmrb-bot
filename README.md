@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/misogi/hmrb-bot.svg?branch=master)](https://travis-ci.org/misogi/hmrb-bot)
+
 # 浜松Ruby bot
 
 浜松 Ruby チャット(現在はSlack)に生息するbotです。
