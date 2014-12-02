@@ -16,11 +16,12 @@ restDaysGreet = () ->
   return "浜松Ruby会議まであと #{days}日です"
 
 module.exports = (robot) ->
+
   # 定期実行
-  cronjob = new cronJob('0 0 18 * * 6', () =>
+  cronjob = new cronJob('0 0 18 * * *', () =>
     greet = restDaysGreet()
     if greet
-      envelope = room: "#kaigi01"
+      envelope = room: "#debug"
       robot.send envelope, greet
   )
   cronjob.start()
@@ -30,3 +31,5 @@ module.exports = (robot) ->
     greet = restDaysGreet()
     if greet
       msg.send greet
+
+module.exports.rest = restDaysGreet

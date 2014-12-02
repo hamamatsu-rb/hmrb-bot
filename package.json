@@ -36,6 +36,6 @@
     "jasmine-node": "latest"
   },
   "scripts" : {
-      "test" : "jasmine-node specs/*spec.coffee"
+      "test" : "jasmine-node spec/ --coffee"
   }
 }
