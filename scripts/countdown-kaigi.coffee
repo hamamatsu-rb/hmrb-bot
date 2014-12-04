@@ -21,8 +21,7 @@ module.exports = (robot) ->
   cronjob = new cronJob('0 0 18 * * *', () =>
     greet = restDaysGreet()
     if greet
-      envelope = room: "#debug"
-      robot.send envelope, greet
+      robot.send '#kaigi01', greet
   )
   cronjob.start()
 
