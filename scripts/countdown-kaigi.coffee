@@ -18,7 +18,7 @@ restDaysGreet = () ->
 module.exports = (robot) ->
 
   # 定期実行
-  cronjob = new cronJob('0 0 18 * * *', () =>
+  cronjob = new cronJob('0 0 18 * * 6', () =>
     greet = restDaysGreet()
     if greet
       robot.send '#kaigi01', greet
