@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/misogi/hmrb-bot.svg?branch=master)](https://travis-ci.org/misogi/hmrb-bot)
+
 # 浜松Ruby bot
 
 浜松 Ruby チャット(現在はSlack)に生息するbotです。
@@ -34,6 +36,9 @@ npm install
 
 scripts/ 以下に .coffee ファイルを作成します。
 他のスクリプトを参考にしましょう。
+
+スクリプト作りの参考はこちら
+https://github.com/github/hubot/blob/master/docs/scripting.md
 
 ## デプロイ
 

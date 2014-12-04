@@ -31,5 +31,11 @@
   "engines": {
     "node": ">= 0.10.x",
     "npm": ">= 2.1.x"
+  },
+  "devDependencies": {
+    "jasmine-node": "latest"
+  },
+  "scripts" : {
+      "test" : "jasmine-node spec/ --coffee"
   }
 }
