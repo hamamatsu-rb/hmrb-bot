@@ -21,16 +21,16 @@
     "url": "https://github.com/github/hubot.git"
   },
   "dependencies": {
-    "cron": ">= 1.0.4",
+    "cron": "^1.0.9",
     "hubot": "^2.12.0",
-    "hubot-google-images": "^0",
+    "hubot-google-images": "^0.1.4",
     "hubot-redis-brain": "^0",
-    "hubot-slack": "^2.2.0",
+    "hubot-slack": "^3.3.0",
     "hubot-youtube": "^0.1.2"
   },
   "engines": {
     "node": ">= 0.12.x",
-    "npm": ">= 2.1.x"
+    "npm": ">= 2.7.x"
   },
   "devDependencies": {
     "jasmine-node": "latest"
