@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "cron": ">= 1.0.4",
-    "hubot": ">= 2.6.0 < 3.0.0",
+    "hubot": "^2.12.0",
     "hubot-google-images": "^0",
     "hubot-redis-brain": "^0",
     "hubot-slack": "^2.2.0",
