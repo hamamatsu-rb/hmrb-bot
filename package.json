@@ -29,7 +29,7 @@
     "hubot-slack": "^2.2.0"
   },
   "engines": {
-    "node": ">= 0.10.x",
+    "node": ">= 0.12.x",
     "npm": ">= 2.1.x"
   },
   "devDependencies": {
