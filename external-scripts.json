@@ -1,6 +1,5 @@
 [
   "hubot-diagnostics",
-  "hubot-redis-brain",
   "hubot-google-images",
   "hubot-youtube",
   "hubot-heroku-keepalive",
