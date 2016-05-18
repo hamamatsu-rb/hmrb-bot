@@ -34,7 +34,7 @@
     "hubot-youtube": "1.0.1"
   },
   "engines": {
-    "node": "6.1.0",
+    "node": "6.1.0"
   },
   "devDependencies": {
     "jasmine-node": "latest"
